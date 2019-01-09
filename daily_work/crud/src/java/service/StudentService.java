@@ -4,7 +4,6 @@ import entity.Student;
 import java.util.ArrayList;
 import java.util.List;
 import javax.transaction.Transactional;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -12,7 +11,7 @@ import util.HibernateUtil;
 
 public class StudentService {
 
-    public static void StudentService(Student student) {
+    public static void saveOrUpdate(Student student) {
 
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();

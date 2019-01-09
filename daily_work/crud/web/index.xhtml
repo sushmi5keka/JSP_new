@@ -1,12 +1,48 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h1>Form</h1>
+        
+        <h:form>
+            Name :
+            <h:inputText value="#{studentBean.student.name}"></h:inputText><br/><br/>
+            
+            Round :
+            <h:selectOneMenu value="#{studentBean.student.round}">
+                <f:selectItem itemValue=" " itemLabel="select a round"></f:selectItem>
+                <f:selectItem itemValue=" Round-37" itemLabel="Round-37"></f:selectItem>
+                <f:selectItem itemValue=" Round-37" itemLabel="Round-37"></f:selectItem>
+                <f:selectItem itemValue=" Round-37" itemLabel="Round-37"></f:selectItem>
+            </h:selectOneMenu><br/><br/>
+            
+            Course :
+            <h:selectManyCheckbox value="#{studentBean.course}">
+            <f:selectItem itemValue="ssc" itemLabel="ssc"></f:selectItem>
+                <f:selectItem itemValue=" hhc" itemLabel="hsc"></f:selectItem>
+                <f:selectItem itemValue=" bba" itemLabel="bba"></f:selectItem>
+                <f:selectItem itemValue=" mba" itemLabel="mba"></f:selectItem>
+            </h:selectManyCheckbox><br/><br/>
+            
+            Gender :
+            <h:selectOneRadio value="#{studentBean.student.gender}">
+             <f:selectItem itemValue=" male" itemLabel="male"></f:selectItem>
+                <f:selectItem itemValue=" female" itemLabel="female"></f:selectItem>
+            </h:selectOneRadio><br/><br/>
+            
+            Massage :
+            <h:inputTextarea value="#{studentBean.student.msg}"></h:inputTextarea><br/><br/>
+            
+            
+            <h:commandButton value="save" action="#{studentBean.save()}"></h:commandButton><br/><br/>
+            <h:commandButton value="update" action="#{studentBean.edit()}"></h:commandButton><br/><br/>
+            <h:commandButton value="delete" action="#{studentBean.del()}"></h:commandButton><br/><br/>
+        </h:form>
     </h:body>
 </html>
 

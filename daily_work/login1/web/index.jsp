@@ -14,7 +14,7 @@
             <c:redirect url="login.jsp"/>
         </c:if>
         
-        <a href="login.jsp">LogOut
+        <a href="logout.jsp">LogOut
             <c:out value="${sessionScope['loginUser']}"/>
         </a>
     </body>

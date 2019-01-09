@@ -46,5 +46,9 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/login?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">1234</property>
+    
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <mapping class="entity.Student"></mapping>
   </session-factory>
 </hibernate-configuration>
