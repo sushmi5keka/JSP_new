@@ -17,6 +17,7 @@ public class StudentService {
         Transaction tr = session.beginTransaction();
         session.saveOrUpdate(student);
         System.out.println("successful...");
+       
         tr.commit();
 
     }

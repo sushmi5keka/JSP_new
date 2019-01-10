@@ -23,10 +23,12 @@ public class StudentBean {
         }
         student.setEducation(cc);
         service.SaveOrUpdate(student);
+         student  = new Student();
     }
 
     public void edit(){
     service.SaveOrUpdate(student);
+     student  = new Student();
     }
     
     public void del(){
